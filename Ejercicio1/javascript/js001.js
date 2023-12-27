@@ -11,3 +11,5 @@ name = "John";
 admin = name;
 
 alert(admin);
+
+alert(`El resultado el ${1+2}`);
