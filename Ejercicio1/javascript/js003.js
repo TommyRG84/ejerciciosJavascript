@@ -65,3 +65,32 @@ if (notaAlumno >= 0 && notaAlumno < 5){
     alert("La nota no es válida.")
 }
 
+/*
+5. Introducir 10 valores en un array, mostrar la suma 
+de sus valores, el mayor valor, el menor valor 
+y la media de los valores.
+*/
+alert("Ejercicio 05")
+
+numero = Number(prompt("Introduzca un número"));; 
+let array1 = [numero];
+let min = numero;
+let max = numero;
+let media = numero;
+
+for (let i = 0; i < 9 ; i++){
+    numero = Number(prompt("Introduzca un número"));
+    array1.push(numero);
+    media += numero;
+    if (numero > max){
+        max = numero;
+    }
+    if (numero < min){
+        min = numero;
+    }
+}
+
+alert("El número más alto introducido es " + max);
+alert("El número más bajo introducido es " + min);
+alert("La suma de los número introducidos es " + media/array1.length);
+alert(array1);
