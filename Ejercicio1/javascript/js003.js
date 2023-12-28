@@ -30,14 +30,15 @@ alert("La suma de los número introducidos es " + suma);
 introduzco el 1, 2, 3 y 4. El resultado es 1234.
 */
 
+
 alert("Ejercicio 03: Leer 4 valores numéricos de una cifra. Esos valores en realidad son un solo número y habrá que escribirlo por pantalla completo. Por ejemplo,introduzco el 1, 2, 3 y 4. El resultado es 1234.");
 
-numero = prompt("Introduzca un número:");
-let numeroUsuario = numero;
+numero;
+let numeroUsuario = "";
 
-for (let i = 0; i < 3; i++) {
-    numeroUsuario += numero;
+for (let i = 0; i < 4; i++) {
     numero = prompt("Introduzca un número:");
+    numeroUsuario += numero;    
 }
 
 alert("El número introducido es " + numeroUsuario);
