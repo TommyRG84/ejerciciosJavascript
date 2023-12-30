@@ -22,5 +22,10 @@ let numeros = {
     10 : "décimo",
 }
 
-let numeroUsuario = prompt("Introduzca un número del 1 al 10:");
-alert(numeros[numeroUsuario]);
+let numeroUsuario;
+
+function pedirNumeroUsuario(){
+    numeroUsuario = prompt("Introduce un número del 1 al 10:");
+}
+
+pedirNumeroUsuario();
