@@ -22,5 +22,27 @@ let numeros = {
     10 : "décimo",
 }
 
-let numeroUsuario = prompt("Introduzca un número del 1 al 10:");
-alert(numeros[numeroUsuario]);
+let numeroUsuario;
+let salirBucle = false;
+
+do {
+    numeroUsuario = Number(prompt("Introduzca un número:"));
+
+    for (let numero in numeros) {
+        if (numeroUsuario === Number(numero)) {
+            alert(numeros[numeroUsuario]);            
+        }
+    }
+
+    if (numeroUsuario < 1 || numeroUsuario > 10) {
+        salirBucle = true;
+        alert("Número fuera del rango válido.");
+    }
+
+} while (!salirBucle);
+
+/*
+2. Crea un script que acepte dos valores introducidos en decimal y muestre el resultado de 
+la suma en binario y en hexadecimal. Utiliza asignación desectructurada.
+*/
+
