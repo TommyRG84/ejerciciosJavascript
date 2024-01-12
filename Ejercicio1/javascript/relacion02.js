@@ -48,15 +48,16 @@ la suma en binario y en hexadecimal. Utiliza asignación desestructurada.
 
 alert("Ejercicio 02: Crea un script que acepte dos valores introducidos en decimal y muestre el resultado de la suma en binario y en hexadecimal. Utiliza asignación desestructurada.")
 
-
-numeroUsuario = Number(prompt("Introduzca un número decimal:"));
+let numeroUsuario1 = Number(prompt("Introduzca un número decimal:"));
 let numeroUsuario2 = Number(prompt("Introduzca un número decimal:"));
-let suma = numeroUsuario + numeroUsuario2;
+let suma = numeroUsuario1 + numeroUsuario2;
 
-let { binario, decimal } = {
+alert(`La suma de ambos números es ${suma}`);
+
+let { binario, hexadecimal } = {
     binario: convertirABinario(suma),
-    decimal: suma
-}
+    hexadecimal: convertirAHexadecimal(suma),
+};
 
 function convertirABinario(suma) {
     let binario = "";
@@ -69,6 +70,10 @@ function convertirABinario(suma) {
     return binario;
 }
 
-alert(`La suma de los dos números es: ${decimal}`);
-alert(`La suma de los dos números convertido a binario es: ${binario}`);
+function convertirAHexadecimal(suma){
+    return suma.toString(16).toUpperCase();
+}
 
+
+alert(`La suma de los dos números convertido a binario es: ${binario}`);
+alert(`La suma de los dos números en hexadecimal es: ${hexadecimal}`);

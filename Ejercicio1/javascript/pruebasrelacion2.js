@@ -19,14 +19,16 @@ function pedirCadena(){
 }
 let { cadena1, cadena2 } = {
     cadena1: pedirCadena(),
-    cadena2: pedirCadena()
-}
+    cadena2: pedirCadena(),
+};
 
 if (cadena1.indexOf(cadena2) != -1){
     alert(`${cadena2} está incluida en ${cadena1}`);
 }else{
     alert(`${cadena2} no está incluida en ${cadena1}`);
 }
+
+
 
 
 
