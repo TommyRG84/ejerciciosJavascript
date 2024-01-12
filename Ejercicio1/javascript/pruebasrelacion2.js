@@ -23,12 +23,35 @@ let { cadena1, cadena2 } = {
 };
 
 if (cadena1.indexOf(cadena2) != -1){
-    alert(`${cadena2} está incluida en ${cadena1}`);
+    alert(`${cadena2} es subcadena de ${cadena1}`);
 }else{
-    alert(`${cadena2} no está incluida en ${cadena1}`);
+    alert(`${cadena2} no es subcadena de ${cadena1}`);
 }
 
+alert(`La cadena 1 tiene ${cadena1.length} caracteres y la cadena 2 tiene ${cadena2.length} caracteres.`);
 
+function modificarCadena(inputString){
 
+    let vocalesMinusculas = "aeiou";
+    let cadenaModificada = "";
+    
+    for(let i = 0; i < inputString.length; i++){
+        let letra = inputString[i];
 
+        if(vocalesMinusculas.indexOf(letra) != -1){
+            cadenaModificada += letra.toUpperCase();
+        }else{
+            cadenaModificada += letra;
+        }        
+    }
+
+    if(cadenaModificada.length > 5){
+        cadenaModificada = cadenaModificada.slice(0,5) + "...";
+    }
+
+    return cadenaModificada;
+}
+
+alert(modificarCadena(cadena1));
+alert(modificarCadena(cadena2));
 
