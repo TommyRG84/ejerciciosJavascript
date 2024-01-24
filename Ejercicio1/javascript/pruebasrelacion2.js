@@ -1,34 +1,32 @@
-/**
- * 5. Crea un script que calcule la potencia de un número sin utilizar **, 
- * pow o cualquier función que realice la tarea directamente. 
- * La acción debe de ser con números y exponentes positivos. 
- * Crea una función que realice esta acción y que sea llamada 
- * cada vez que se introduzcan los valores.
- */
+/*
+6. Realiza un script que muestre la tabla de multiplicar del 
+valor introducido por teclado del 1 al 10. 
+Una vez hecho esto se le preguntará si desea continuar. 
+En el caso de que así sea, se continuará con los 10 siguientes 
+números, así hasta que se le pulse cancelar. 
+Debe de utilizarse una función flecha.
+*/
 
-alert("Ejercicio 05");
+alert("Ejercicio 06")
 
-let base;
-let exponente;
+let numero = Number(prompt("Introduzca un número del 1 al 10 para saber su tabla de multiplicar:"));
 
-do{
-    base = Number(prompt("Introduzca un número para obtener la potencia deseada:"));
-    exponente = Number(prompt("Introduzca el exponente a elevar la base introducida:"));
-    if(base < 0 || exponente < 0){
-        alert("Introduzca valores positivos tanto para la base como para el exponente.");
-    }
-}while(base < 0 || exponente < 0);
-
-function calcularPotencia(numero1, numero2){
-    let resultado = base;
-    if (exponente === 0){
-        return 1;
-    }else{
-        for(let i = exponente; i > 0 ; i--){
-            resultado = resultado * base;
-        }
-        return resultado;
+let imprimirTablaMultiplicar = (numero) =>{
+    let resultado;
+    for(let i = 1; i <= 10; i++){
+        resultado = numero * i; 
+        alert(`${numero} x ${i} = ${resultado}`);       
     }    
 }
 
-alert(`El resultado de elevar ${base} por ${exponente} es ${calcularPotencia(base, exponente)}`);
+imprimirTablaMultiplicar(numero);
+let salirBucle = confirm("Pulse aceptar para obtener la siguiente tabla de multiplicar o pulse cancelar para salir.");
+
+do{
+    
+    if(salirBucle){
+        numero++;
+        imprimirTablaMultiplicar(numero);
+    }
+    salirBucle = confirm("Pulse aceptar para obtener la siguiente tabla de multiplicar o pulse cancelar para salir.");
+}while(salirBucle);
