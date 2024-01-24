@@ -9,6 +9,8 @@ o cualquier otro valor. Utiliza la instrucción for..in.
 HAY QUE HACERLO CON OBJETOS.
 */
 
+alert("Ejercicio 01");
+
 let numeros = {
     1 : "primero",
     2 : "segundo",
@@ -46,7 +48,7 @@ do {
 la suma en binario y en hexadecimal. Utiliza asignación desestructurada.
 */
 
-alert("Ejercicio 02: Crea un script que acepte dos valores introducidos en decimal y muestre el resultado de la suma en binario y en hexadecimal. Utiliza asignación desestructurada.")
+alert("Ejercicio 02");
 
 let numeroUsuario1 = Number(prompt("Introduzca un número decimal:"));
 let numeroUsuario2 = Number(prompt("Introduzca un número decimal:"));
@@ -184,24 +186,29 @@ Debe de utilizarse una función flecha.
 
 alert("Ejercicio 06")
 
-let numero = Number(prompt("Introduzca un número del 1 al 10 para saber su tabla de multiplicar:"));
+let minimo = 1;
+let maximo = 10;
+
+let numero = Number(prompt("Introduzca un número para saber su tabla de multiplicar:"));
 
 let imprimirTablaMultiplicar = (numero) =>{
     let resultado;
-    for(let i = 1; i <= 10; i++){
+    let mostrarTabla = "";
+    for(let i = minimo; i <= maximo; i++){
         resultado = numero * i; 
-        alert(`${numero} x ${i} = ${resultado}`);       
+        mostrarTabla += `${numero} x ${i} = ${resultado} \n`;       
     }    
+    alert(mostrarTabla);
 }
 
 imprimirTablaMultiplicar(numero);
 let finBucle = confirm("Pulse aceptar para obtener la siguiente tabla de multiplicar o pulse cancelar para salir.");
 
-do{
-    
+do{    
     if(finBucle){
-        numero++;
+        minimo +=10;
+        maximo +=10;
         imprimirTablaMultiplicar(numero);
     }
-    finBucle = confirm("Pulse aceptar para obtener la siguiente tabla de multiplicar o pulse cancelar para salir.");
+    finBucle = confirm("Pulse aceptar para obtener los siguientes 10 múltiplos o pulse cancelar para salir.");
 }while(finBucle);

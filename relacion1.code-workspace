@@ -2,6 +2,12 @@
     "folders": [
         {
             "path": "."
+        },
+        {
+            "path": "../JS3-Cambio de color"
         }
-    ]
+    ],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "JS3-Cambio de color"
+    }
 }

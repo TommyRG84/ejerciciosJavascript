@@ -9,24 +9,29 @@ Debe de utilizarse una función flecha.
 
 alert("Ejercicio 06")
 
-let numero = Number(prompt("Introduzca un número del 1 al 10 para saber su tabla de multiplicar:"));
+let minimo = 1;
+let maximo = 10;
+
+let numero = Number(prompt("Introduzca un número para saber su tabla de multiplicar:"));
 
 let imprimirTablaMultiplicar = (numero) =>{
     let resultado;
-    for(let i = 1; i <= 10; i++){
+    let mostrarTabla = "";
+    for(let i = minimo; i <= maximo; i++){
         resultado = numero * i; 
-        alert(`${numero} x ${i} = ${resultado}`);       
+        mostrarTabla += `${numero} x ${i} = ${resultado} \n`;       
     }    
+    alert(mostrarTabla);
 }
 
 imprimirTablaMultiplicar(numero);
-let salirBucle = confirm("Pulse aceptar para obtener la siguiente tabla de multiplicar o pulse cancelar para salir.");
+let finBucle = confirm("Pulse aceptar para obtener la siguiente tabla de multiplicar o pulse cancelar para salir.");
 
-do{
-    
-    if(salirBucle){
-        numero++;
+do{    
+    if(finBucle){
+        minimo +=10;
+        maximo +=10;
         imprimirTablaMultiplicar(numero);
     }
-    salirBucle = confirm("Pulse aceptar para obtener la siguiente tabla de multiplicar o pulse cancelar para salir.");
-}while(salirBucle);
+    finBucle = confirm("Pulse aceptar para obtener los siguientes 10 múltiplos o pulse cancelar para salir.");
+}while(finBucle);
